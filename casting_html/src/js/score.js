@@ -109,7 +109,9 @@ function insertData() {
     $('#team2').removeClass('loser');
   }
   insertIcons();
-  $('#content').find(".text-fill").textfill({maxFontPixels: 80});
+  $(document).ready(function() {
+    $('#content').find(".text-fill").textfill({maxFontPixels: 80});
+  });
 }
 
 function setWinner(winner) {
@@ -163,7 +165,6 @@ function initHide() {
 function initAnimation(force = true) {
   if (!tweenInitial.isActive() && initNeeded) {
     insertData();
-    console.log('Tween');
     tweenInitial = new TimelineMax();
     tweenInitial.delay(0.5)
       .fromTo([$('#content')], 0, {
@@ -248,7 +249,9 @@ function changeText(id, new_value) {
 
   function _changeText(object, new_value) {
     object.text(new_value)
-    $('#content').find(".text-fill").textfill({maxFontPixels: 80});
+    $(document).ready(function() {
+      $('#content').find(".text-fill").textfill({maxFontPixels: 80});
+    });
   }
 }
 

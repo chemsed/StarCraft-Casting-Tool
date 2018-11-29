@@ -183,7 +183,7 @@ function Connect() {
 
 function fillText() {
   $("div.box").find(".text-fill").textfill({
-    maxFontPixels: 80
+    maxFontPixels: 60
   });
 }
 

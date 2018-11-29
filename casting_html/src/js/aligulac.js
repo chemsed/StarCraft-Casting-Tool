@@ -84,7 +84,9 @@ function processData() {
 
   function _changeText(object, new_value) {
     object.text(new_value)
-    $('#content').find(".text-fill").textfill({maxFontPixels: 80});
+    $(document).ready(function() {
+      $('#content').find(".text-fill").textfill({maxFontPixels: 80});
+    });
   }
 }
 
